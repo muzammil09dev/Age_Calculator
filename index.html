@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Calculator</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    
+</head>
+<body>
+
+<div class="container bg-white flex text-white p-16 fw-bold h-screen  justify-center items-center">
+    <div class="col-sm-6 items-center shadow  text-dark hover:border-neutral-800 pt-3 pb-2 p-2 border-4 rounded-lg">
+        <form class="flex flex-col items-center rounded-lg bg-slate-500 pt-3 ">
+            <div class="base">
+                <h3 class="text-white text-center hover:border-neutral-800 bg-slate-500 p-4 rounded-lg border-4"><i class="bi bi-calculator me-2"></i>Age Calculator<i class="bi bi-caret-down-fill ms-2"></i></h3>
+            </div>
+            <div class="container ">
+                <div class="flex gap-3 my-5 mx-5 p-10 bg-slate-500 hover:border-neutral-800 text-center justify-center  rounded-lg border-4 ">
+                    <div class="block">
+                        <p class="pb-2 text-white"><i class="bi bi-calendar-day mx-2 text-white"></i>Date</p>
+                        <input type="text" name="date" id="date" placeholder="dd" minlength="1" maxlength="2" class="border-4 w-full p-1 m-1" required>
+                    </div>
+                    <div class="block">
+                        <p class="pb-2 text-white"><i class="bi bi-calendar-month mx-2 text-white"></i>Month</p>
+                        <input type="text" name="month" id="month" placeholder="mm" minlength="1" maxlength="2" class="border-4 w-full p-1 m-1" required>
+                    </div>
+                    <div class="block">
+                        <p class="pb-2 text-white"><i class="bi bi-calendar mx-2 text-white"></i>Year</p>
+                        <input type="text" name="year" id="year" placeholder="yyyy" minlength="4" maxlength="4" class="border-4 w-full p-1 m-1" required>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moved the button below the input fields -->
+            <button class="btn bg-slate-800 border-3 hover:bg-black text-white rounded-full fw-bold  mt-4 mb-3" type="button" name="submit" value="Calculate Age" onclick="calculateAge()">Calculate Age</button>
+
+            <!-- Display -->
+            <div class="flex block overflow-hidden m-5 mt-2 pb-2 fw-bold text-secondary" id="age"></div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
